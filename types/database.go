@@ -14,8 +14,13 @@ type Database struct {
 	conn *sql.DB
 }
 
-func (receiver Database) Query() {
-	panic("implement me")
+// func (receiver Database) Query() {
+func (receiver Database) Query(query string, args ...interface{}) (*sql.Rows, error) {
+	return receiver.conn.Query(query, args...)
+}
+
+func (s Statement) Query(args ...interface{}) (*sql.Rows, error) {
+	return s.stmt.Query(args...)
 }
 
 // Close closes the database connection
@@ -81,6 +86,7 @@ func (s Statement) Close() error {
 type StatementDriver interface {
 	Close() error
 	Exec(args ...interface{}) (sql.Result, error)
+	Query(args ...interface{}) (*sql.Rows, error)
 }
 
 // TransactionDriver is an interface for database transactions
@@ -94,5 +100,5 @@ type DatabaseDriver interface {
 	Close() error
 	Exec(query string, args ...interface{}) (sql.Result, error)
 	Begin() (TransactionDriver, error)
-	Query()
+	Query(query string, args ...interface{}) (*sql.Rows, error)
 }

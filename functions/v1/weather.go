@@ -13,9 +13,9 @@ func CurrentWeather(location string) (currentWeatherRecord *models.CurrentWeathe
 	currentWeatherRecord, err = packages.WeatherApi.Current(location)
 
 	record := &models.CurrentWeatherDatabase{
-		Location: location,
-		TempF: currentWeatherRecord.Current.TempF,
-		TempC: currentWeatherRecord.Current.TempC,
+		Location:    location,
+		TempF:       currentWeatherRecord.Current.TempF,
+		TempC:       currentWeatherRecord.Current.TempC,
 		LastUpdated: currentWeatherRecord.Current.LastUpdatedEpoch,
 	}
 

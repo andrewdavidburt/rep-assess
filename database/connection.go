@@ -2,8 +2,9 @@ package database
 
 import (
 	"database/sql"
-	_ "github.com/mattn/go-sqlite3"
 	"reperio-backend-assessment/types"
+
+	_ "github.com/mattn/go-sqlite3"
 )
 
 var (
