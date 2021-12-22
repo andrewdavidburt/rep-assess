@@ -5,6 +5,7 @@ This is Reperio Health's GoLang backend assessment.
 ## Notes from Candidate (Andrew Burt)
 - I've uploaded all of this also to a github repo at https://github.com/andrewdavidburt/rep-assess
 - I've included full notes to my resolutions to the Objectives below the Objectives section (Notes on Completion of Objectives)
+- The original git repo I uploaded last night was missing the v2 route files (functions/v2/weather.go and handlers/v2/currentWeather.go), though they were in the zip file. My apologies, I forgot to git add them.
 
 ## Prerequisite
 
