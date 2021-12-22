@@ -3,8 +3,8 @@
 This is Reperio Health's GoLang backend assessment. 
 
 ## Notes from Candidate (Andrew Burt)
-I've uploaded all of this also to a github repo at [].
-I've included full notes to my resolutions to the Objectives below the Objectives section
+I've uploaded all of this also to a github repo at https://github.com/andrewdavidburt/rep-assess
+I've included full notes to my resolutions to the Objectives below the Objectives section (Notes on Completion of Objectives)
 
 ## Prerequisite
 
